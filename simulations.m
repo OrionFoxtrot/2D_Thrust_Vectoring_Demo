@@ -199,7 +199,7 @@ function animateThrustVectorBoxSave(x, y, thetab, L, W)
                      thrust_length*thrust_dir0(2), ...
                      'r', 'LineWidth', 2, 'MaxHeadSize', 2 );
 
-    v = VideoWriter('animation.mp4', 'MPEG-4');
+    v = VideoWriter('larger_movement_sample_move_Animation.mp4', 'MPEG-4');
     v.FrameRate = 30;  
     open(v);
 
