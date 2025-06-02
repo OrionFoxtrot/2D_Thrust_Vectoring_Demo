@@ -31,6 +31,16 @@ Key features include:
 
 - **sample_Move_Animation.mp4**  
   Example output of a thrust‐vectoring maneuver run via `simulations.m`. Demonstrates the box moving to a new (x, y, θ) setpoint.
+  
+- **analysis.mat**  
+  General analysis and comparison of controller vs controller observer designs.
+  
+- **responsesOfDifferentSystemDesigns.png**  
+  Summary image of the different response types.
+
+- **quickSketchOfDynamicsDerivations.pdf**  
+  Quick outline of how I derived the equations of motion for this system.
+  
 
 
 ## Installation & Setup
