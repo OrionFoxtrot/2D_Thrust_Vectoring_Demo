@@ -1,7 +1,12 @@
 clear; clc; close all;
 
-Controlled_System = load("Controlled_Sys.mat");
+% Pure Controller System
+Controlled_System = load("Controller_Sys.mat");
 Controlled_System = Controlled_System.Controlled_System;
+
+% Controller Observer System
+% Controlled_System = load("observer_Controller_Sys.mat");
+% Controlled_System = Controlled_System.Controlled_System;
 
 t = 0:0.01:7;
 
@@ -10,8 +15,8 @@ desired_Y = 10;
 desired_ThetaB = 0;
 u = [ones(size(t))*desired_X; ones(size(t))*desired_Y; ones(size(t))*desired_ThetaB]; % 3d input (X, Y, Angle) (desired)
 
-[yv,t] = lsim(Controlled_System, u, t, [0;0;0;0;0;0;]);
-
+[yv,t] = lsim(Controlled_System, u, t, [0;0;0;0;0;0;]); % Pure Controller
+% [yv,t] = lsim(Controlled_System, u, t, [0;0;0;0;0;0;0;0;0;0;0;0;]); %Observer Controller
 
 x = yv(:,1);
 y = yv(:,2);
